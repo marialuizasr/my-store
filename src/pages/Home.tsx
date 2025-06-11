@@ -107,9 +107,7 @@ export function Home() {
                             <span>{filteredProducts.length} produtos</span>
                         </div>
                     </div>
-
-                    {/* Products Grid - Responsive: 4 columns desktop, 2 columns mobile */}
-                    <div className="products-grid">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         {filteredProducts.map((product) => (
                             <div key={product.id} className="product-card-wrapper">
                                 <ProductCard product={product} />
