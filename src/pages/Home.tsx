@@ -83,7 +83,7 @@ export function Home() {
                                             text-xs sm:text-sm md:text-base
                                         `}
                                     >
-                                        {category === "all" ? "Todos" : (category || "Unknown")}
+                                        {category === "all" ? "All" : (category || "Unknown")}
                                     </button>
                                 ))}
                             </div>
@@ -98,13 +98,13 @@ export function Home() {
                     {/* Section Header */}
                     <div className="flex justify-between items-start mb-4 sm:mb-6 md:mb-8 flex-wrap gap-4">
                         <h2 className="text-gray-800 m-0 break-words flex-1 text-xl sm:text-2xl md:text-3xl font-bold">
-                            {selectedCategory === "all" ? "Produtos em Destaque" : `Produtos - ${selectedCategory}`}
+                            {selectedCategory === "all" ? "Featured Products" : `Products - ${selectedCategory}`}
                         </h2>
                         <div className="flex items-center gap-2 text-gray-500 text-sm sm:text-base flex-shrink-0">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M3 3h4v4H3V3zm6 0h4v4H9V3zm6 0h4v4h-4V3zM3 9h4v4H3V9zm6 0h4v4H9V9zm6 0h4v4h-4V9zM3 15h4v4H3v-4zm6 0h4v4H9v-4zm6 0h4v4h-4v-4z" />
                             </svg>
-                            <span>{filteredProducts.length} produtos</span>
+                            <span>{filteredProducts.length} products</span>
                         </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -118,8 +118,8 @@ export function Home() {
                     {filteredProducts.length === 0 && (
                         <div className="text-center py-8 sm:py-12 md:py-16 px-4 text-gray-500">
                             <div className="text-4xl sm:text-5xl md:text-6xl mb-4">🔍</div>
-                            <h3 className="mb-2 text-lg sm:text-xl">Nenhum produto encontrado</h3>
-                            <p className="m-0 text-sm sm:text-base">Tente selecionar uma categoria diferente</p>
+                            <h3 className="mb-2 text-lg sm:text-xl">No products found</h3>
+                            <p className="m-0 text-sm sm:text-base">Try selecting a different category</p>
                         </div>
                     )}
                 </section>
@@ -127,19 +127,19 @@ export function Home() {
                 {/* Call to Action Section */}
                 <section className="bg-gray-50 py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8 rounded-lg text-center my-8 sm:my-12 md:my-16 max-w-full">
                     <h3 className="mb-4 text-gray-800 break-words text-xl sm:text-2xl font-bold">
-                        Não encontrou o que procura?
+                        Didn't find what you're looking for?
                     </h3>
                     <p className="mb-8 text-gray-500 max-w-lg mx-auto text-sm sm:text-base">
-                        Cadastre-se na nossa newsletter para ser notificado sobre novos produtos e ofertas exclusivas.
+                        Subscribe to our newsletter to be notified about new products and exclusive offers.
                     </p>
                     <div className="newsletter-form">
                         <input
                             type="email"
-                            placeholder="Digite seu email"
+                            placeholder="Enter your email"
                             className="py-2.5 sm:py-3 px-4 border-2 border-gray-300 rounded-md text-sm sm:text-base"
                         />
                         <button className="py-2.5 sm:py-3 px-4 sm:px-6 md:px-8 bg-green-600 border-none rounded-md text-white cursor-pointer font-semibold text-sm sm:text-base hover:bg-green-700 transition-colors">
-                            Inscrever-se
+                            Subscribe
                         </button>
                     </div>
                 </section>
@@ -151,10 +151,10 @@ export function Home() {
                             🚚
                         </div>
                         <h4 className="mb-2 text-gray-800 text-base sm:text-lg md:text-xl font-semibold">
-                            Frete Grátis
+                            Free Shipping
                         </h4>
                         <p className="text-gray-500 m-0 text-sm sm:text-base">
-                            Em pedidos acima de R$ 200
+                            On orders over $200
                         </p>
                     </div>
                     <div className="text-center p-3 sm:p-4 md:p-6">
@@ -162,10 +162,10 @@ export function Home() {
                             🔒
                         </div>
                         <h4 className="mb-2 text-gray-800 text-base sm:text-lg md:text-xl font-semibold">
-                            Pagamento Seguro
+                            Secure Payment
                         </h4>
                         <p className="text-gray-500 m-0 text-sm sm:text-base">
-                            100% transações seguras
+                            100% secure transactions
                         </p>
                     </div>
                     <div className="text-center p-3 sm:p-4 md:p-6">
@@ -173,10 +173,10 @@ export function Home() {
                             ↩️
                         </div>
                         <h4 className="mb-2 text-gray-800 text-base sm:text-lg md:text-xl font-semibold">
-                            Trocas Fáceis
+                            Easy Returns
                         </h4>
                         <p className="text-gray-500 m-0 text-sm sm:text-base">
-                            Política de 30 dias
+                            30-day policy
                         </p>
                     </div>
                 </section>
