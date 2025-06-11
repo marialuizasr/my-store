@@ -1,8 +1,8 @@
 /**
- * Trunca um texto se ele exceder o comprimento máximo especificado
- * @param text - O texto a ser truncado
- * @param maxLength - O comprimento máximo (padrão: 45)
- * @returns O texto truncado com "..." se necessário
+ * Truncates text if it exceeds the specified maximum length
+ * @param text - The text to be truncated
+ * @param maxLength - The maximum length (default: 45)
+ * @returns The truncated text with "..." if necessary
  */
 export const truncateText = (text: string, maxLength: number = 45): string => {
     if (!text) return '';
@@ -10,11 +10,11 @@ export const truncateText = (text: string, maxLength: number = 45): string => {
 };
 
 /**
- * Formata um preço para exibição com símbolo de moeda
- * @param price - O preço numérico
- * @param currency - O símbolo da moeda (padrão: '$')
- * @param decimals - Número de casas decimais (padrão: 2)
- * @returns O preço formatado como string
+ * Formats a price for display with currency symbol
+ * @param price - The numeric price
+ * @param currency - The currency symbol (default: '$')
+ * @param decimals - Number of decimal places (default: 2)
+ * @returns The formatted price as a string
  */
 export const formatPrice = (price: number, currency: string = '$', decimals: number = 2): string => {
     if (typeof price !== 'number' || isNaN(price)) {
@@ -24,10 +24,10 @@ export const formatPrice = (price: number, currency: string = '$', decimals: num
 };
 
 /**
- * Formata uma avaliação para exibição
- * @param rate - A nota da avaliação
- * @param count - O número de avaliações (opcional)
- * @returns Objeto com informações formatadas da avaliação
+ * Formats a rating for display
+ * @param rate - The rating score
+ * @param count - The number of reviews (optional)
+ * @returns Object with formatted rating information
  */
 export const formatRating = (rate: number, count?: number) => {
     const stars = '★'.repeat(Math.floor(rate)) + '☆'.repeat(5 - Math.floor(rate));
@@ -39,31 +39,31 @@ export const formatRating = (rate: number, count?: number) => {
 };
 
 /**
- * Valida se um ID é válido
- * @param id - O ID a ser validado
- * @returns true se o ID for válido
+ * Validates if an ID is valid
+ * @param id - The ID to be validated
+ * @returns true if the ID is valid
  */
 export const isValidId = (id: any): boolean => {
     return typeof id === 'number' && id > 0 && Number.isInteger(id);
 };
 
 /**
- * Gera uma URL de produto
- * @param productId - O ID do produto
- * @returns A URL formatada para o produto
+ * Generates a product URL
+ * @param productId - The product ID
+ * @returns The formatted URL for the product
  */
 export const generateProductUrl = (productId: number): string => {
     if (!isValidId(productId)) {
-        throw new Error('ID do produto inválido');
+        throw new Error('Invalid product ID');
     }
     return `/products/${productId}`;
 };
 
 /**
- * Calcula o desconto percentual
- * @param originalPrice - Preço original
- * @param discountedPrice - Preço com desconto
- * @returns Percentual de desconto
+ * Calculates the discount percentage
+ * @param originalPrice - Original price
+ * @param discountedPrice - Discounted price
+ * @returns Discount percentage
  */
 export const calculateDiscountPercentage = (originalPrice: number, discountedPrice: number): number => {
     if (originalPrice <= 0 || discountedPrice < 0) {

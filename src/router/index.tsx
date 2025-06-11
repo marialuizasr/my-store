@@ -16,7 +16,6 @@ export const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home />,
-                // Opcional: adicionar meta informações
                 handle: {
                     title: "Home - My Store",
                     description: "Browse our amazing products",

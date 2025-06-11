@@ -61,7 +61,7 @@ export function Checkout() {
         e.preventDefault();
         setIsProcessing(true);
 
-        // Simular processamento do pagamento
+        // Simulate payment processing
         setTimeout(() => {
             clearCart();
             setIsProcessing(false);
