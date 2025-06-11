@@ -79,7 +79,7 @@ export function Layout() {
                                 <input
                                     type="email"
                                     placeholder="Enter your email"
-                                    className="flex-1 px-4 py-2 rounded-l-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    className="flex-1 px-4 py-2 text-white border-1 rounded-l-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
                                 />
                                 <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-r-md transition-colors">
                                     Subscribe
